@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>每日水果推荐 | 健康减肥小助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-title {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header with background image -->
+        <header class="mb-12 text-center relative">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 z-0" style="background-image: url('https://images.unsplash.com/photo-1519996529931-28324d5a630e?ixlib=rb-4.0.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            <div class="relative z-10 py-8">
+                <h1 class="hero-title text-4xl md:text-5xl font-bold mb-3 text-white">每日水果推荐</h1>
+                <p class="text-gray-100 max-w-2xl mx-auto font-geist-mono text-lg">均衡营养，健康减肥，每天一份水果的小确幸</p>
+                
+                <!-- Hero image -->
+                <div class="my-8 max-w-4xl mx-auto">
+                    <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-4.0.1&auto=format&fit=crop&w=1350&q=80" 
+                         alt="水果拼盘" 
+                         class="rounded-2xl shadow-lg w-full object-cover h-64 md:h-80">
+                </div>
+            </div>
+        </header>
+
+        <!-- Recipe ideas section - Moved to top -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                    <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"></path>
+                    <line x1="6" y1="17" x2="18" y2="17"></line>
+                </svg>
+                健康水果食谱
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="recipe-card hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="水果沙拉" class="recipe-img">
+                    <div class="recipe-content p-4">
+                        <h3 class="recipe-title text-xl font-semibold mb-2">彩虹水果沙拉</h3>
+                        <p class="recipe-desc text-gray-600 mb-3">多种水果混合，低卡路里高营养的完美早餐选择。</p>
+                        <div class="nutrition-info bg-gray-50 p-3 rounded-lg mb-3">
+                            <h4 class="font-medium text-sm mb-2">营养价值（每份）：</h4>
+                            <ul class="text-sm text-gray-600">
+                                <li>• 热量：120千卡</li>
+                                <li>• 膳食纤维：4.5g</li>
+                                <li>• 维生素C：85mg（推荐每日摄入量的94%）</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-2">🍎 苹果提供抗氧化物质</p>
+                            <p class="text-xs text-gray-500">🫐 蓝莓增强免疫力</p>
+                            <p class="text-xs text-gray-500">🍊 橙子补充维生素C</p>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mr-2">仅120卡路里</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">富含维生素</span>
+                        </div>
+                        <a href="#" class="recipe-link text-purple-600 hover:text-purple-800">查看食谱 →</a>
+                    </div>
+                </div>
+                <div class="recipe-card hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="香蕉莓果冰淇淋" class="recipe-img">
+                    <div class="recipe-content p-4">
+                        <h3 class="recipe-title text-xl font-semibold mb-2">香蕉莓果冰淇淋</h3>
+                        <p class="recipe-desc text-gray-600 mb-3">纯天然水果制成，无添加糖，健康美味的冷冻甜点。</p>
+                        <div class="nutrition-info bg-gray-50 p-3 rounded-lg mb-3">
+                            <h4 class="font-medium text-sm mb-2">营养价值（每份）：</h4>
+                            <ul class="text-sm text-gray-600">
+                                <li>• 热量：145千卡</li>
+                                <li>• 天然糖分：15g</li>
+                                <li>• 钾：450mg（有助于血压调节）</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-2">🍌 香蕉富含色氨酸，改善心情</p>
+                            <p class="text-xs text-gray-500">🫐 莓果类提供花青素</p>
+                            <p class="text-xs text-gray-500">🥛 椰奶提供健康脂肪</p>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mr-2">零添加糖</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">高纤维</span>
+                        </div>
+                        <a href="#" class="recipe-link text-purple-600 hover:text-purple-800">查看食谱 →</a>
+                    </div>
+                </div>
+                <div class="recipe-card hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1504473089979-b1c4993a9653?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="烤水果" class="recipe-img">
+                    <div class="recipe-content p-4">
+                        <h3 class="recipe-title text-xl font-semibold mb-2">肉桂烤苹果</h3>
+                        <p class="recipe-desc text-gray-600 mb-3">健康的甜点选择，满足甜食欲望却不增加太多热量。</p>
+                        <div class="nutrition-info bg-gray-50 p-3 rounded-lg mb-3">
+                            <h4 class="font-medium text-sm mb-2">营养价值（每份）：</h4>
+                            <ul class="text-sm text-gray-600">
+                                <li>• 热量：95千卡</li>
+                                <li>• 膳食纤维：3.5g</li>
+                                <li>• 抗氧化物质：槲皮素（改善心血管健康）</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-2">🍎 苹果皮含有丰富膳食纤维</p>
+                            <p class="text-xs text-gray-500">🌿 肉桂具有调节血糖功效</p>
+                            <p class="text-xs text-gray-500">✨ 烤制过程保留营养不流失</p>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mr-2">低糖</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">抗氧化</span>
+                        </div>
+                        <a href="#" class="recipe-link text-purple-600 hover:text-purple-800">查看食谱 →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Healthy Desserts Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="recipe-card hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="水果慕斯" class="recipe-img">
+                    <div class="recipe-content p-4">
+                        <h3 class="recipe-title text-xl font-semibold mb-2">芒果椰奶慕斯</h3>
+                        <p class="recipe-desc text-gray-600 mb-3">使用椰奶代替奶油，热量更低，口感绵密。</p>
+                        <div class="nutrition-info bg-gray-50 p-3 rounded-lg mb-3">
+                            <h4 class="font-medium text-sm mb-2">营养价值（每份）：</h4>
+                            <ul class="text-sm text-gray-600">
+                                <li>• 热量：165千卡</li>
+                                <li>• 维生素A：25%每日推荐量</li>
+                                <li>• 维生素C：75%每日推荐量</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-2">🥭 芒果富含胡萝卜素</p>
+                            <p class="text-xs text-gray-500">🥥 椰奶含有中链脂肪酸</p>
+                            <p class="text-xs text-gray-500">🌟 有助于皮肤健康</p>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mr-2">低脂</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">无乳糖</span>
+                        </div>
+                        <a href="#" class="recipe-link text-purple-600 hover:text-purple-800">查看食谱 →</a>
+                    </div>
+                </div>
+                <div class="recipe-card hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="水果冰棒" class="recipe-img">
+                    <div class="recipe-content p-4">
+                        <h3 class="recipe-title text-xl font-semibold mb-2">缤纷水果冰棒</h3>
+                        <p class="recipe-desc text-gray-600 mb-3">纯水果制作，无添加糖，清爽解暑。</p>
+                        <div class="nutrition-info bg-gray-50 p-3 rounded-lg mb-3">
+                            <h4 class="font-medium text-sm mb-2">营养价值（每份）：</h4>
+                            <ul class="text-sm text-gray-600">
+                                <li>• 热量：45千卡</li>
+                                <li>• 维生素C：35mg</li>
+                                <li>• 水分：92%</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-2">🍓 草莓富含维生素C</p>
+                            <p class="text-xs text-gray-500">🍊 柑橘提供类黄酮</p>
+                            <p class="text-xs text-gray-500">💧 补充水分好选择</p>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mr-2">天然甜度</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">维C丰富</span>
+                        </div>
+                        <a href="#" class="recipe-link text-purple-600 hover:text-purple-800">查看食谱 →</a>
+                    </div>
+                </div>
+                <div class="recipe-card hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="水果松饼" class="recipe-img">
+                    <div class="recipe-content p-4">
+                        <h3 class="recipe-title text-xl font-semibold mb-2">全麦水果松饼</h3>
+                        <p class="recipe-desc text-gray-600 mb-3">使用全麦面粉，搭配新鲜水果，营养美味。</p>
+                        <div class="nutrition-info bg-gray-50 p-3 rounded-lg mb-3">
+                            <h4 class="font-medium text-sm mb-2">营养价值（每份）：</h4>
+                            <ul class="text-sm text-gray-600">
+                                <li>• 热量：185千卡</li>
+                                <li>• 膳食纤维：6g</li>
+                                <li>• 蛋白质：5g</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-2">🌾 全麦面粉富含B族维生素</p>
+                            <p class="text-xs text-gray-500">🫐 蓝莓提供抗氧化物质</p>
+                            <p class="text-xs text-gray-500">🍌 香蕉增添自然甜度</p>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mr-2">高纤维</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">低GI</span>
+                        </div>
+                        <a href="#" class="recipe-link text-purple-600 hover:text-purple-800">查看食谱 →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Knowledge Section -->
+            <div class="bg-white rounded-xl shadow-sm p-6 mt-8">
+                <h3 class="text-xl font-semibold mb-4">健康小贴士</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 p-2 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">为什么水果甜品可以放心吃？</h4>
+                            <p class="text-gray-600 text-sm">水果中的天然糖分与膳食纤维的完美结合，可以减缓糖分吸收，不会导致血糖快速升高。选择正确的水果甜点，既能满足口腹之欲，又能获得营养。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 p-2 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">如何选择健康水果甜点？</h4>
+                            <p class="text-gray-600 text-sm">选择新鲜水果为主要原料，避免额外添加糖分，优先使用全谷物和健康油脂，注意控制份量，享受美味的同时也要适可而止。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Controls -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                    <path d="M4 21v-7m0 0V4m0 10h16m0 0v7m0-7V4"/>
+                </svg>
+                水果分类
+            </h2>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="filter-btn active px-4 py-2 rounded-full bg-green-100 hover:bg-green-200 text-green-800 transition-colors duration-200" data-filter="all">全部水果</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 transition-colors duration-200" data-filter="low-calorie">低卡路里</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 transition-colors duration-200" data-filter="high-fiber">高纤维</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 transition-colors duration-200" data-filter="high-vitamin-c">维C丰富</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800 transition-colors duration-200" data-filter="weight-loss">减肥友好</button>
+            </div>
+        </div>
+
+        <!-- Fruits Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="fruits-container">
+            <!-- Apple Card -->
+            <div class="fruit-card" data-categories="high-fiber low-calorie weight-loss">
+                <div class="fruit-img-container">
+                    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="苹果" class="fruit-image">
+                </div>
+                <div class="card-header">
+                    <div class="icon-container">
+                        <svg class="fruit-icon">
+                            <use xlink:href="#apple-icon"></use>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">苹果</h2>
+                </div>
+                <div class="tags">
+                    <span class="tag">#高纤</span>
+                    <span class="tag">#低卡</span>
+                    <span class="tag">#日常推荐</span>
+                </div>
+                <p class="card-desc">含丰富膳食纤维(4.5g/个)，促进饱腹助消化，有益心脏健康，是大众健康之选。</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">卡路里</span>
+                        <span class="stat-value">52大卡/100g</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">维生素C</span>
+                        <span class="stat-value">低</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orange Card -->
+            <div class="fruit-card" data-categories="high-vitamin-c weight-loss">
+                <div class="fruit-img-container">
+                    <img src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="橙子" class="fruit-image">
+                </div>
+                <div class="card-header">
+                    <div class="icon-container">
+                        <svg class="fruit-icon">
+                            <use xlink:href="#orange-icon"></use>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">橙子</h2>
+                </div>
+                <div class="tags">
+                    <span class="tag">#维C充足</span>
+                    <span class="tag">#补水</span>
+                    <span class="tag">#强免疫</span>
+                </div>
+                <p class="card-desc">一个橙子接近每日维C需求(69.7mg/个)，水分足，是经典免疫力支持水果。</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">卡路里</span>
+                        <span class="stat-value">57大卡/100g</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">纤维</span>
+                        <span class="stat-value">3.0g/个</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue adding image containers for each fruit card... -->
+            <!-- Blueberry Card -->
+            <div class="fruit-card" data-categories="high-fiber low-calorie weight-loss">
+                <div class="fruit-img-container">
+                    <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="蓝莓" class="fruit-image">
+                </div>
+                <div class="card-header">
+                    <div class="icon-container">
+                        <svg class="fruit-icon">
+                            <use xlink:href="#blueberry-icon"></use>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">蓝莓</h2>
+                </div>
+                <div class="tags">
+                    <span class="tag">#抗氧化之星</span>
+                    <span class="tag">#护眼健脑</span>
+                    <span class="tag">#低卡</span>
+                </div>
+                <p class="card-desc">花青素含量极高，强力抗氧化，有益视力与认知功能，是低热量健康零食。</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">纤维含量</span>
+                        <span class="stat-value">8.4%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">卡路里</span>
+                        <span class="stat-value">低</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kiwi Card -->
+            <div class="fruit-card" data-categories="high-vitamin-c high-fiber weight-loss">
+                <div class="fruit-img-container">
+                    <img src="https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="猕猴桃" class="fruit-image">
+                </div>
+                <div class="card-header">
+                    <div class="icon-container">
+                        <svg class="fruit-icon">
+                            <use xlink:href="#kiwi-icon"></use>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">猕猴桃</h2>
+                </div>
+                <div class="tags">
+                    <span class="tag">#维C丰富</span>
+                    <span class="tag">#助消化</span>
+                    <span class="tag">#低卡</span>
+                </div>
+                <p class="card-desc">"维C小仓库" (1-2个满足日需)，富含膳食纤维促排便，红心品种维C更高。</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">维生素C</span>
+                        <span class="stat-value">64.0mg/个</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">卡路里</span>
+                        <span class="stat-value">56大卡/100g</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banana Card -->
+            <div class="fruit-card" data-categories="high-fiber weight-loss">
+                <div class="fruit-img-container">
+                    <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="香蕉" class="fruit-image">
+                </div>
+                <div class="card-header">
+                    <div class="icon-container">
+                        <svg class="fruit-icon">
+                            <use xlink:href="#banana-icon"></use>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">香蕉</h2>
+                </div>
+                <div class="tags">
+                    <span class="tag">#富含钾</span>
+                    <span class="tag">#能量补充</span>
+                    <span class="tag">#助消化</span>
+                </div>
+                <p class="card-desc">天然能量棒，钾元素丰富有益血压，含纤维(3g/个)助肠道蠕动。</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">卡路里</span>
+                        <span class="stat-value">115大卡/100g</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">纤维</span>
+                        <span class="stat-value">3.0g/个</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strawberry Card -->
+            <div class="fruit-card" data-categories="high-vitamin-c low-calorie weight-loss">
+                <div class="fruit-img-container">
+                    <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="草莓" class="fruit-image">
+                </div>
+                <div class="card-header">
+                    <div class="icon-container">
+                        <svg class="fruit-icon">
+                            <use xlink:href="#strawberry-icon"></use>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">草莓</h2>
+                </div>
+                <div class="tags">
+                    <span class="tag">#高维C</span>
+                    <span class="tag">#低卡</span>
+                    <span class="tag">#减肥友好</span>
+                </div>
+                <p class="card-desc">维生素C丰富(VC>苹果11倍)，热量低(30kcal/100g)，抗氧化，适合减肥期间食用。</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">维生素C</span>
+                        <span class="stat-value">44.7mg/半杯</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">纤维</span>
+                        <span class="stat-value">3.0g/杯</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More fruit cards with images... -->
+        </div>
+
+        <!-- Add seasonal fruits section -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                当季水果精选
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="seasonal-fruit-card">
+                    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="芒果" class="seasonal-img">
+                    <div class="seasonal-info">
+                        <h3>芒果</h3>
+                        <p>夏季之选</p>
+                    </div>
+                </div>
+                <div class="seasonal-fruit-card">
+                    <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="葡萄" class="seasonal-img">
+                    <div class="seasonal-info">
+                        <h3>葡萄</h3>
+                        <p>秋季之选</p>
+                    </div>
+                </div>
+                <div class="seasonal-fruit-card">
+                    <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="柑橘" class="seasonal-img">
+                    <div class="seasonal-info">
+                        <h3>柑橘</h3>
+                        <p>冬季之选</p>
+                    </div>
+                </div>
+                <div class="seasonal-fruit-card">
+                    <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="樱桃" class="seasonal-img">
+                    <div class="seasonal-info">
+                        <h3>樱桃</h3>
+                        <p>春季之选</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Recommendation Section with larger images -->
+        <section class="bg-gray-100 p-6 rounded-xl shadow-sm mb-16">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                    <path d="M2 12h10"></path>
+                    <path d="M9 4v16"></path>
+                    <path d="M12 9h10"></path>
+                    <path d="M19 4v16"></path>
+                </svg>
+                今日推荐
+            </h2>
+            <div id="daily-recommendation" class="flex flex-col md:flex-row items-center gap-6">
+                <!-- JavaScript will fill this -->
+            </div>
+        </section>
+
+        <!-- Tips Section - expanded with images -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 8v4"></path>
+                    <path d="M12 16h.01"></path>
+                </svg>
+                水果小知识
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm flex">
+                    <img src="https://images.unsplash.com/photo-1610397962076-02407a169a5b?ixlib=rb-4.0.1&auto=format&fit=crop&w=200&q=80" 
+                         alt="水果营养" class="w-24 h-24 object-cover rounded-lg mr-4">
+                    <ul class="space-y-3 flex-1">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 text-xl">•</span>
+                            <span>建议每天食用200~350g新鲜水果，餐前或两餐之间食用可增加饱腹感</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 text-xl">•</span>
+                            <span>水果不能代餐，长期用水果代餐会导致营养不良</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm flex">
+                    <img src="https://images.unsplash.com/photo-1527324688151-0e627063f2b1?ixlib=rb-4.0.1&auto=format&fit=crop&w=200&q=80" 
+                         alt="选择水果" class="w-24 h-24 object-cover rounded-lg mr-4">
+                    <ul class="space-y-3 flex-1">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 text-xl">•</span>
+                            <span>减肥期间选择含糖量在14%以下的水果，如西瓜、草莓、杨梅等</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 text-xl">•</span>
+                            <span>选择当季水果，营养价值更高，多样化搭配食用更均衡</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer - expanded with social links -->
+        <footer class="text-center pt-6 border-t border-gray-200">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm mb-4">关注我们获取更多健康饮食知识</p>
+            <p class="text-gray-400 text-xs">© 2023 健康水果推荐. All rights reserved.</p>
+        </footer>
+    </div>
+    <!-- SVG Icons -->
+    <svg width="0" height="0" class="hidden">
+        <!-- Fruit Icons -->
+        <symbol id="apple-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21.5c-2.2 0-3-1.5-4.5-1.5S4.8 21.5 2.5 21.5v-1c.7 0 1.5-.5 1.5-2 0-3.5 2-5.5 4-5.5 2.2 0 3 1.5 4 1.5 1.2 0 2-1.5 4-1.5 2 0 4 2 4 5.5 0 1.5.8 2 1.5 2v1c-2.3 0-3-1.5-4.5-1.5S14 21.5 12 21.5Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 6.5c1.5 0 2.1-1.3 2.9-2.9.4-.9.6-1.4.7-1.6.3-.4 0-1-.6-1-3.5 0-3.5 3-6 3-3 0-3-2-6-2-.5 0-.9.6-.6 1 .1.2.3.7.7 1.6.8 1.6 1.4 2.9 2.9 2.9 3 0 3-1.5 3-1.5s0 1.5 3 1.5Z" stroke="currentColor" stroke-width="1.5"/>
+        </symbol>
+        <symbol id="orange-icon" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 4c-2 0-4.5 1.5-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M15 3.5s-.5 2-3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="blueberry-icon" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="13" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 8.5c-.5-1.5-1-3.5 0-5.5M14 8.5c.5-1.5 1-3.5 0-5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M9 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM15 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM12 16a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="kiwi-icon" viewBox="0 0 24 24" fill="none">
+            <ellipse cx="12" cy="12" rx="8" ry="7" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 12c1 1.5 2.5 2 4 2s3-.5 4-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M9 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM15 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="banana-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 14c-5 0-9-3-9-7 0 0 1-1 2-1s2 1 4 1 3-1 4-1 1 1 1 1c0 4-1 7-2 7Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 14c1.5 0 3.5-1 4.32-3.34C17.13 8.33 18.79 7 20.5 7c.5 0 1.5.5 1.5 2s-1 7-5 7c-1 0-3 0-5-2Z" stroke="currentColor" stroke-width="1.5"/>
+        </symbol>
+        <symbol id="strawberry-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 4c-4 0-6-2-6-2s1 4-2 6c0 6 4 12 8 12s8-6 8-12c-3-2-4-6-4-6s-2 2-4 2Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 12s1.5 1 4 1 4-1 4-1M9 16s1 1 3 1 3-1 3-1M10 8s.5 1 2 1 2-1 2-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="watermelon-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9c0-1.88.85-3.87 1.43-5C6 4 9 3 12 3s6 1 7.57 4c.58 1.13
+
+ 1.43 3.12 1.43 5Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M7 16v-3M12 17v-3M17 16v-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="raspberry-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 4c-4 0-6-2-6-2s1 4-2 6c0 6 4 12 8 12s8-6 8-12c-3-2-4-6-4-6s-2 2-4 2Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM12 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM16 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM9 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM15 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM12 16a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="guava-icon" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </symbol>
+    </svg>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey
+            if(isPinching) e.preventDefault()
+        }, { passive: false })
+    </script>
+</body>
+</html>

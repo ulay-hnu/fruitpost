@@ -1,0 +1,344 @@
+/* Base Styles */
+:root {
+    --primary-bg: #f9fafb;
+    --card-bg: #ffffff;
+    --card-border: #f1f1f1;
+    --primary-text: #111827;
+    --secondary-text: #4b5563;
+    --accent-color: #10b981;
+    --accent-light: #d1fae5;
+    --tag-bg: #f3f4f6;
+    --stat-bg: #f9fafb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--primary-text);
+    background-color: var(--primary-bg);
+}
+
+.font-geist-mono {
+    font-family: monospace;
+    letter-spacing: -0.03em;
+}
+
+/* Card Styles - Updated with image container */
+.fruit-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid var(--card-border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+}
+
+.fruit-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.fruit-img-container {
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.fruit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fruit-card:hover .fruit-image {
+    transform: scale(1.05);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin: 1rem 1.25rem 0.75rem;
+}
+
+.icon-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    background-color: var(--accent-light);
+}
+
+.fruit-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-color);
+    stroke-width: 1.5;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 1.25rem 0.75rem;
+}
+
+.tag {
+    background-color: var(--tag-bg);
+    color: var(--secondary-text);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.card-desc {
+    color: var(--secondary-text);
+    font-size: 0.875rem;
+    margin: 0 1.25rem 1rem;
+    flex-grow: 1;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 0 1.25rem 1.25rem;
+}
+
+.stat {
+    background-color: var(--stat-bg);
+    padding: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--secondary-text);
+}
+
+.stat-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+/* Filter Buttons */
+.filter-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background-color: var(--tag-bg);
+    color: var(--secondary-text);
+    border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+    background-color: #e5e7eb;
+    color: var(--primary-text);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-light);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Daily Recommendation - Updated with images */
+#daily-recommendation {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.recommendation-fruit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    width: 100%;
+}
+
+.recommendation-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.recommendation-icon {
+    width: 36px;
+    height: 36px;
+    color: var(--accent-color);
+}
+
+.recommendation-details {
+    flex: 1;
+}
+
+.recommendation-details h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.recommendation-details p {
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    margin: 0;
+}
+
+/* Seasonal Fruits Section */
+.seasonal-fruit-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.seasonal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.seasonal-fruit-card:hover .seasonal-img {
+    transform: scale(1.05);
+}
+
+.seasonal-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+}
+
+.seasonal-info h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+}
+
+.seasonal-info p {
+    font-size: 0.875rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Recipe Cards */
+.recipe-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.recipe-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-content {
+    padding: 1.25rem;
+}
+
+.recipe-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-text);
+}
+
+.recipe-desc {
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+}
+
+.recipe-link {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.875rem;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.recipe-link:hover {
+    transform: translateX(5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .fruit-card {
+        padding-bottom: 1rem;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .fruit-img-container {
+        height: 160px;
+    }
+}
+
+/* Animation for Card Entry */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fruit-card {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.fruit-card:nth-child(1) { animation-delay: 0.1s; }
+.fruit-card:nth-child(2) { animation-delay: 0.2s; }
+.fruit-card:nth-child(3) { animation-delay: 0.3s; }
+.fruit-card:nth-child(4) { animation-delay: 0.4s; }
+.fruit-card:nth-child(5) { animation-delay: 0.5s; }
+.fruit-card:nth-child(6) { animation-delay: 0.6s; }
+.fruit-card:nth-child(7) { animation-delay: 0.7s; }
+.fruit-card:nth-child(8) { animation-delay: 0.8s; }
+.fruit-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* Hide cards that don't match filter */
+.fruit-card.hidden {
+    display: none;
+}
